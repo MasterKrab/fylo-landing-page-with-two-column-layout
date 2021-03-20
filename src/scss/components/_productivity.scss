@@ -1,0 +1,113 @@
+@use "abstracts/vars/colors" as c;
+
+.productivity{
+   padding: 1.5rem;
+   text-align: center;
+   display: grid;
+   grid-template-columns: 1fr;
+   justify-content: center;
+   margin-top: 150px;
+   background-color: c.$light-grayish-blue;
+   position: relative;
+   width: 100%;
+
+   @media screen and (min-width: 900px){
+      grid-template-columns: repeat(2, 1fr);
+      gap: 50px;
+      text-align: start;
+   }
+
+   @media screen and (min-width: 1400px){
+      grid-template-columns: repeat(2, 625px);
+   }
+
+   &::before{
+      content:"";
+      background-image: url(../assets/img/bg-curve-mobile.svg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: bottom;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%);
+      width: 100%;
+      min-height: 100px;
+      
+      @media screen and (min-width: 900px){
+         background-image: url(../assets/img/bg-curve-desktop.svg);
+      }
+   }
+
+   &__illustration{
+      content: url(../assets/img/illustration-2.svg);
+      width: 100%;
+
+      @media screen and (min-width: 900px){
+         order: 2;
+      }
+   }
+
+   &__title,
+   &__link{
+      font-family: Raleway, sans-serif;
+   }
+
+   &__title{
+      font-size: 1rem;
+      color: c.$very-dark-blue;
+
+      @media screen and (min-width: 900px){
+         font-size: 1.5rem;
+      }
+
+      @media screen and (min-width: 1100px){
+         font-size: 2.5rem;
+      }
+   }
+
+   &__text{
+      text-align: start;
+      font-size: 0.9rem;
+      color: c.$desaturated-blue;
+      line-height: 1.5;
+      max-width: 550px;
+
+      @media screen and (min-width: 500px){
+         text-align: center;
+      }
+
+      @media screen and (max-width: 900px){
+         margin-left: auto;
+         margin-right: auto;
+      }  
+
+      @media screen and (min-width: 900px){
+         text-align: start;
+         font-size: 1rem;
+         color: c.$very-dark-blue;
+      }
+   }
+
+   &__link{
+      color: c.$moderate-cyan;
+      border-bottom: 1px solid c.$moderate-cyan;
+      padding-bottom: 5px;
+      cursor: pointer;
+
+      @media screen and (min-width: 768px){
+         transition: opacity 0.2s;
+
+         &:hover{
+            opacity: 0.5;
+         }
+      }
+
+      &::after{
+         content: url(../assets/img/icon-arrow.svg);
+         position: relative;
+         top: 2px;
+         left: 4px;
+      }
+   }
+}

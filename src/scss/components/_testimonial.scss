@@ -1,0 +1,70 @@
+@use "abstracts/vars/colors" as c;
+
+.testimonial{
+   background-color: #fff;
+   box-shadow: 0 0 15px rgba(#000, 0.1);
+   margin-top: 5rem;
+   margin-bottom: 5rem;
+   padding: 2rem;
+   text-align: start;
+   max-width: 390px;
+   
+   @media screen and (max-width: 768px){
+      margin-left: auto;
+      margin-right: auto;
+   }
+
+   &__quote,
+   &__name{
+      color: c.$very-dark-blue;
+   }
+
+   &__quote{
+      margin: 1.5rem 0;
+      position: relative;
+      line-height: 1.5;
+      font-size: 0.85rem;
+
+      @media screen and (min-width: 768px){
+         font-size: 1rem;
+      }
+
+      &::before{
+         content: "";
+         background-image: url(../assets/img/icon-quotes.svg);
+         background-repeat: no-repeat;
+         background-size: contain;
+         position: absolute;
+         top: -30px;
+         width: 20px;
+         height: 20px;
+      }
+   }
+
+   &__footer{
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+   }
+
+   &__image{
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+   }
+
+   &__job,
+   &__name{
+      margin: 0;
+   }
+
+   &__job{
+      font-size: 0.8rem;
+      color: c.$desaturated-blue;
+   }
+
+   &__name{
+      font-size: 1rem;
+      margin-bottom: 5px;
+   }
+}

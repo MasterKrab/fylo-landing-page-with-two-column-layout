@@ -24,6 +24,8 @@
     <meta name="theme-color" content="#ffffff">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css" integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&amp;family=Raleway:wght@400;700&amp;display=swap" rel="stylesheet">
   </head>
   <body> 
     <header class="main-header">
@@ -62,7 +64,7 @@
             <blockquote class="testimonial__quote">Fylo has improved our team productivity by an order of magnitude. Since making the switch our team has become a well-oiled collaboration machine.</blockquote>
             <footer class="testimonial__footer"><img class="testimonial__image" src="assets/img/avatar-testimonial.jpg" alt="Kyle Burton profile image">
               <div class="testimonial__data"> 
-                <h2 class="testimonial__name">Kyle Burton</h2>
+                <h3 class="testimonial__name">Kyle Burton</h3>
                 <p class="testimonial__job">Founder & CEO, Huddle</p>
               </div>
             </footer>
@@ -72,11 +74,11 @@
       <section class="early-access">
         <header class="early-access__header">
           <h2 class="early-access__title">Get early access today</h2>
-          <p class="early-acces__text">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
+          <p class="early-access__text">It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.</p>
         </header>
         <form class="form-early-access" action="#">
           <div class="form-early-access__email">
-            <input class="form-header__input" type="email" name="email" aria-label="Your email" placeholder="Enter your email" required title="Type a valid email adress" pattern="^[a-z0-9]+(.[_a-z0-9]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,15})$">
+            <input class="form-early-access__input" type="email" name="email" aria-label="Your email" placeholder="Enter your email" required title="Type a valid email adress" pattern="^[a-z0-9]+(.[_a-z0-9]+)*@[a-z0-9-]+(.[a-z0-9-]+)*(.[a-z]{2,15})$">
             <p class="form-early-access__error">Please check your email</p>
           </div>
           <button class="form-early-access__submit">Get Started</button>
@@ -86,24 +88,24 @@
     <footer class="footer"><img class="footer__logo" src="assets/img/logo.svg" alt="Fylo logo">
       <div class="footer__body">
         <ul class="contact">
-          <li class="contact__item"><a href="tel:+1-543-123-4567">Phone: +1-543-123-4567</a></li>
-          <li class="contact__item"><a href="mailto:example@fylo.com">example@fylo.com</a></li>
+          <li class="contact__item"> <a class="contact__link contact__link--phone" href="tel:+1-543-123-4567">Phone: +1-543-123-4567</a></li>
+          <li class="contact__item"> <a class="contact__link contact__link--email" href="mailto:example@fylo.com">example@fylo.com</a></li>
         </ul>
         <ul class="footer-list">
-          <li class="footer-list__item"><a class="footer-list__link">About Us</a></li>
-          <li class="footer-list__item"><a class="footer-list__link">Jobs</a></li>
-          <li class="footer-list__item"><a class="footer-list__link">Press</a></li>
-          <li class="footer-list__item"><a class="footer-list__link">Blog</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">About Us</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Jobs</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Press</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Blog</a></li>
         </ul>
         <ul class="footer-list">
-          <li class="footer-list__item"><a class="footer-list__link">Contact Us</a></li>
-          <li class="footer-list__item"><a class="footer-list__link">Terms</a></li>
-          <li class="footer-list__item"><a class="footer-list__link">Privacy</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Contact Us</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Terms</a></li>
+          <li class="footer-list__item"><a class="footer-list__link" href="#">Privacy</a></li>
         </ul>
         <ul class="social">
-          <li class="social__item"> <a class="social__link"><i class="fab fa-facebook-f social__icon"></i><span class="social__screen-reader-only">Go to Fylo's facebook</span></a></li>
-          <li class="social__item"> <a class="social__link"><i class="fab fa-twitter social__icon"></i><span class="social__screen-reader-only">Go to Fylo's twitter</span></a></li>
-          <li class="social__item"> <a class="social__link"><i class="fab fa-instagram social__icon"></i><span class="social__screen-reader-only">Go to Fylo's instagram</span></a></li>
+          <li class="social__item"> <a class="social__link" href="#"><i class="fab fa-facebook-f social__icon"></i><span class="social__screen-reader-only">Go to Fylo's facebook</span></a></li>
+          <li class="social__item"> <a class="social__link" href="#"><i class="fab fa-twitter social__icon"></i><span class="social__screen-reader-only">Go to Fylo's twitter</span></a></li>
+          <li class="social__item"> <a class="social__link" href="#"><i class="fab fa-instagram social__icon"></i><span class="social__screen-reader-only">Go to Fylo's instagram</span></a></li>
         </ul>
       </div>
     </footer>

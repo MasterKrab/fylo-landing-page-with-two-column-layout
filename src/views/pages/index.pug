@@ -29,14 +29,20 @@ html(lang="en")
       link(rel="stylesheet", href="css/styles.css")
       //- Fontawesome
       link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.2/css/all.css", integrity="sha384-vSIIfh2YWi9wW0r9iZe7RJPrKwp6bG+s9QZMoITbCckVJqGCCRhc+ccxNcdpHuYu", crossorigin="anonymous")
+      //- Fonts
+      link(rel="preconnect", href="https://fonts.gstatic.com")
+      //- Raleway, Open Sans
+      link(href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Raleway:wght@400;700&display=swap", rel="stylesheet")
    body 
       header.main-header
+      
          .main-header__top
             img.main-header__logo(src="assets/img/logo.svg", alt="Fylo logo")
             nav
                ul.menu 
                   each page in pages
                      li.menu__item: a.menu__link(href= page.url)= page.title
+
          .main-header__body
             .main-header__illustration 
             .main-header__card
@@ -55,6 +61,7 @@ html(lang="en")
                         )
                      p.form-header__error Please check your email
                   button.form-header__submit Get Started
+
       main.main
 
          article.productivity
@@ -70,17 +77,17 @@ html(lang="en")
                   footer.testimonial__footer
                      img.testimonial__image(src="assets/img/avatar-testimonial.jpg", alt="Kyle Burton profile image")
                      .testimonial__data 
-                        h2.testimonial__name Kyle Burton
+                        h3.testimonial__name Kyle Burton
                         p.testimonial__job Founder & CEO, Huddle
 
          section.early-access
             header.early-access__header
                h2.early-access__title Get early access today
-               p.early-acces__text It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
+               p.early-access__text It only takes a minute to sign up and our free starter tier is extremely generous. If you have any questions, our support team would be happy to help you.
 
             form.form-early-access(action="#")
                   .form-early-access__email
-                     input.form-header__input(
+                     input.form-early-access__input(
                            type="email", 
                            name="email", 
                            aria-label="Your email", 
@@ -97,30 +104,32 @@ html(lang="en")
          .footer__body
 
             ul.contact
-               li.contact__item: a(href="tel:+1-543-123-4567") Phone: +1-543-123-4567
-               li.contact__item: a(href="mailto:example@fylo.com") example@fylo.com
+               li.contact__item 
+                  a.contact__link.contact__link--phone(href="tel:+1-543-123-4567") Phone: +1-543-123-4567
+               li.contact__item 
+                  a.contact__link.contact__link--email(href="mailto:example@fylo.com") example@fylo.com
 
             ul.footer-list
-               li.footer-list__item: a.footer-list__link About Us
-               li.footer-list__item: a.footer-list__link Jobs
-               li.footer-list__item: a.footer-list__link Press
-               li.footer-list__item: a.footer-list__link Blog
+               li.footer-list__item: a(href="#").footer-list__link About Us
+               li.footer-list__item: a(href="#").footer-list__link Jobs
+               li.footer-list__item: a(href="#").footer-list__link Press
+               li.footer-list__item: a(href="#").footer-list__link Blog
 
             ul.footer-list
-               li.footer-list__item: a.footer-list__link Contact Us
-               li.footer-list__item: a.footer-list__link Terms
-               li.footer-list__item: a.footer-list__link Privacy
+               li.footer-list__item: a(href="#").footer-list__link Contact Us
+               li.footer-list__item: a(href="#").footer-list__link Terms
+               li.footer-list__item: a(href="#").footer-list__link Privacy
             
             ul.social
                li.social__item 
-                  a.social__link
+                  a(href="#").social__link
                      i.fab.fa-facebook-f.social__icon
                      span.social__screen-reader-only Go to Fylo's facebook
                li.social__item 
-                  a.social__link
+                  a(href="#").social__link
                      i.fab.fa-twitter.social__icon
                      span.social__screen-reader-only Go to Fylo's twitter
                li.social__item 
-                  a.social__link
+                  a(href="#").social__link
                      i.fab.fa-instagram.social__icon
                      span.social__screen-reader-only Go to Fylo's instagram

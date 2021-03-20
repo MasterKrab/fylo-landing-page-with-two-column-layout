@@ -1,0 +1,112 @@
+@use "abstracts/vars/colors" as c;
+
+.early-access{
+   background-color: c.$desaturated-blue;
+   padding: 3rem 1.5rem;
+   text-align: center;
+   color: c.$light-grayish-blue;
+   display: grid;
+   grid-template-columns: 1fr;
+
+   @media screen and (min-width: 768px){
+      grid-template-columns: repeat(2, 1fr);
+      justify-content: center;
+      text-align: start;
+      gap: 50px;
+   }
+
+   @media screen and (min-width: 1200px){
+      grid-template-columns: repeat(2, 1fr);
+   }
+
+   @media screen and (min-width: 1400px){
+      grid-template-columns: repeat(2, 625px);
+   }
+   
+   &__title{
+      font-family: Raleway, sans-serif;
+      font-size: 1.5rem;
+
+      @media screen and (min-width: 1200px){
+         font-size: 1.8rem;
+      }
+   }
+
+   &__text{
+      opacity: 0.8;
+      font-size: 0.95rem;
+      line-height: 1.5;
+      margin-top: 1.5rem;
+      margin-bottom: 1.5rem;
+
+      @media screen and (min-width: 1200px){
+         font-size: 1.3rem;
+      }
+   }
+}
+
+.form-early-access{
+   padding: 1rem;
+
+   &__input,
+   &__submit{
+      width: 100%;
+   }
+
+   
+   &__error{
+      margin-top: 5px;
+      margin-bottom: 5px;
+      color: transparent;
+
+      @media screen and (min-width: 900px){
+         text-align: start;
+      }
+   }
+   
+   &__input{
+      padding: 0.8rem;
+      border: 1px solid transparent;
+
+      &::placeholder{
+         opacity: 0.5;
+      }
+
+      &:focus{
+         outline: 2px dotted c.$very-dark-blue;
+         outline-offset: 5px;
+
+         &:invalid{
+            border-color: #ff0000;
+            
+            & ~ .form-early-access__error{
+               color: #ff0000;
+            }
+         }
+      }  
+   }
+
+   &__submit{
+      background-color: c.$bright-blue;
+      padding: 1rem;
+      font-family: Raleway, sans-serif;
+      border: none;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+
+      @media screen and (min-width: 768px){
+         max-width: 300px;
+         transition: background-color 0.2s;
+
+         &:hover{
+            background-color: lighten(c.$bright-blue, 10%);
+         }
+      }
+
+      &:focus{
+         outline: 2px dotted  c.$bright-blue;
+         outline-offset: 5px;
+      }
+   }
+}
